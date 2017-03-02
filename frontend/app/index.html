@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Angular Authentication</title>
+
+</head>
+<body data-ng-app="auth.client">
+<div data-ng-controller="UserController as userCtrl">
+    <span data-ng-show="userCtrl.isAuthenticated">{{userCtrl.welcome}}</span>
+    <form data-ng-show="!userCtrl.isAuthenticated" data-ng-submit="userCtrl.submit()">
+        <input data-ng-model="userCtrl.user.username" type="text" name="userCtrl.user" placeholder="Username"/>
+        <input data-ng-model="userCtrl.user.password" type="password" name="pass" placeholder="Password"/>
+        <input type="submit" value="Login"/>
+    </form>
+    <div>{{userCtrl.error}}</div>
+    <div data-ng-show="userCtrl.isAuthenticated">
+        <a data-ng-click="userCtrl.callRestricted()" href="">Shh, this is private!</a>
+        <br>
+        <div>{{userCtrl.message}}</div>
+        <a data-ng-click="userCtrl.logout()" href="">Logout</a>
+    </div>
+</div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="app.module.js"></script>
+<script src="app.config.js"></script>
+<script src="auth/auth.interceptor.factory.js"></script>
+<script src="auth/auth.service.js"></script>
+<script src="auth/auth.dao.js"></script>
+<script src="user.controller.js"></script>
+</body>
+</html>
