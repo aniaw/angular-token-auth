@@ -1,6 +1,5 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var jwt = require('jsonwebtoken');  //https://npmjs.org/package/node-jsonwebtoken
 var expressJwt = require('express-jwt'); //https://npmjs.org/package/express-jwt
 
 var routes = require('./REST/routes');

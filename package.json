@@ -9,7 +9,11 @@
   },
   "description": "Example of Token-based authentication in [AngularJS](http://angularjs.org) with [Express](http://expressjs.com).",
   "main": "auth.server.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-livereload": "3.8.1",
+    "gulp-nodemon": "2.2.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
