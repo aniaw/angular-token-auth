@@ -19,7 +19,7 @@
         function decodeProfile(token)
         {
             var encodedProfile = token.split('.')[1];
-            JSON.parse(AuthService.urlBase64Decode(encodedProfile))
+            return JSON.parse(AuthService.urlBase64Decode(encodedProfile))
         }
 
         function handleError()

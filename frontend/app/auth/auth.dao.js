@@ -4,7 +4,7 @@
 
     function AuthDAO($resource)
     {
-        var api = $resource('api/authenticate/:a', null, {
+        var api = $resource('/api/authenticate/:a', null, {
             test: {method: 'GET', params: {a: 'test'}}
         });
 

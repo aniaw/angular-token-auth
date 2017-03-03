@@ -10,8 +10,8 @@ module.exports = function ()
 {
     var app = express();
 
-    // We are going to protect /api routes with JWT
-    app.use('/api', expressJwt({secret: config.secret}));
+    // We are going to protect /api/authenticate/test routes with JWT
+    app.use('/api/authenticate/test', expressJwt({secret: config.secret}));
 
     app.use(bodyParser.json());
     app.use('/', express.static(__dirname + '/../frontend/app'));
