@@ -58,9 +58,9 @@
 
         ctrl.callRestricted = function ()
         {
-            AuthDAO.test().then(function (name)
+            AuthDAO.test().then(function (data)
             {
-                ctrl.message += ' ' + name;
+                ctrl.message += ' ' + data.name;
 
             }).catch(function (data)
             {
